@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.App {
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }  
+
+  body {
+    font-family: Arial, sans-serif;
+}
+
+input[type="text"],
+input[type="date"],
+button {
+    margin: 0.5em;
+}
+
+button {
+    padding: 0.5em;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    margin-bottom: 1em;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+h2 {
+    color: #333;
+}
+
+.cv-section {
+    margin-bottom: 2em;
+}
+
+.cv-section h3 {
+    color: #007bff;
+}
+
+.cv-section p {
+    line-height: 1.5;
+}
