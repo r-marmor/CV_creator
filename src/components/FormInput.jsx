@@ -16,8 +16,7 @@ function FormInput({
     onRemoveExperience
 }) {
     return (
-        <div>
-            <h1>Form Input Component</h1>
+        <div className='formInput'>
             <PersonalDetails
                 details={personalDetails} 
                 onInputChange={onPersonalDetailsChange}

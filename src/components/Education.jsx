@@ -29,33 +29,27 @@ function Education( { entries, onInputChange, onAddEntry, onRemoveEntry } ) {
         {entries.map((item, index) => (
             <form key={item.id}>
                 {index === 0 ? null : <hr />}
-                <label>
-                    Course / Program:
                     <input 
                         type="text" 
                         name="course"
+                        placeholder='Course'
                         value={item.course}
                         onChange={(event) => handleInputChange(item.id, event)}
                     />
-                </label>
-                <label>
-                    University:
                     <input 
                         type="text" 
                         name="university"
+                        placeholder='University'
                         value={item.university}
                         onChange={(event) => handleInputChange(item.id, event)}
                     />
-                </label>
-                <label>
-                    Graduation date:
                     <input 
-                        type="date" 
+                        type="text" 
                         name="graduationDate"
+                        placeholder='Graduation date (DD/MM/YYYY)'
                         value={item.graduationDate}
                         onChange={(event) => handleInputChange(item.id, event)}
                     />
-                </label>
                 {entries.length > 0 && (
                     <Button onClick={() => handleRemoveClick(item.id)} title="Remove" />
                 )}

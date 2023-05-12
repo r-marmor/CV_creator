@@ -40,8 +40,7 @@ function App() {
   };
 
   return (
-    <div>
-        <h1>Resume Builder</h1>
+    <div className='appContainer'>
         <FormInput
           personalDetails={personalDetails}
           onPersonalDetailsChange={handlePersonalDetailsChange}
