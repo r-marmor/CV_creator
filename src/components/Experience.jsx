@@ -24,46 +24,36 @@ function Experience( { entries, onInputChange, onAddEntry, onRemoveEntry } ) {
 
   return (
     <div>
-      <h2>Experience</h2>
+      <h2 className='fs-md'>Experience</h2>
       {entries.map((item, index) => (
-        <form key={item.id}>
+        <form key={item.id} className='inputs'>
             {index === 0 ? null : <hr />}
-            <label>
-                Company:
                 <input
                     type="text" 
                     name="company" 
                     value={item.company} 
+                    placeholder='Company'
                     onChange={(event) => handleInputChange(item.id, event)}
                 />
-            </label>
-            <label>
-                Position:
                 <input
                     type="text" 
                     name="position" 
                     value={item.position} 
+                    placeholder='Position'
                     onChange={(event) => handleInputChange(item.id, event)}
                 />
-            </label>
-            <label>
-                From:
                 <input
                     type="date" 
                     name="from"
                     value={item.from}
                     onChange={(event) => handleInputChange(item.id, event)}
                 />
-            </label>
-            <label>
-                To:
                 <input
                     type="date" 
                     name="to" 
                     value={item.to} 
                     onChange={(event) => handleInputChange(item.id, event)}
                 />
-            </label>
             {entries.length > 0 && (
                     <Button onClick={() => handleRemoveClick(item.id)} title="Remove" />
                 )}

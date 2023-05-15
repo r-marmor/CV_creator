@@ -25,9 +25,9 @@ function Education( { entries, onInputChange, onAddEntry, onRemoveEntry } ) {
 
   return (
     <div>
-        <h2>Education</h2>
+        <h2 className='fs-md'>Education</h2>
         {entries.map((item, index) => (
-            <form key={item.id}>
+            <form key={item.id} className='inputs'>
                 {index === 0 ? null : <hr />}
                     <input 
                         type="text" 

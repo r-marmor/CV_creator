@@ -1,9 +1,24 @@
+/* UTILITY CLASSES */
+
+.fs-lg {
+  font-size: 2.5rem;
+}
+
+.fs-md {
+  font-size: 1.5rem;
+}
+
+.fs-sm {
+  font-size: 0.9rem;
+}
+
+
 /* RESET */
 
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 *, *:before, *:after {
@@ -41,6 +56,10 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.removeBtn {
+    width: 5rem;
 }
 
 form {
@@ -96,6 +115,39 @@ h2 {
   border: solid 1px blue;
   width: 30%;
   height: 90vh;
-  padding: 20px;
+  padding: 0 30px;
+  padding-top: 50px;
+}
+
+.cvPreviewHeader {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 3px rgba(31, 30, 119, 0.863);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cvPreviewHeaderLeftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cvPreviewHeaderRightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.cvPreviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin: 1rem 0;
+}
+
+.fullName {
+  font-weight: bold;
+  color: rgba(31, 30, 119, 0.863);
 }
 

@@ -3,32 +3,35 @@ import React from 'react';
 function CvPreview( { personalDetails, education, experience } ) {
   return (
     <div className='CvPreview'>
-      <h1>CV Preview</h1>
-        <h2>Personal Details</h2>
-        <p>Name: {personalDetails.name}</p>
-        <p>Email: {personalDetails.email}</p>
-        <p>Phone: {personalDetails.phone}</p>
+      <div className='cvPreviewHeader'>
+        <div className='cvPreviewHeaderLeftSide'>
+          <p className='fullName fs-lg'>{personalDetails.name}</p>
+          <p className='fs-md'>{personalDetails.title}</p>
+        </div>
+        <div className='cvPreviewHeaderRightSide fs-sm'>
+          <p>{personalDetails.email}</p>
+          <p>{personalDetails.phone}</p>
+          <p>{personalDetails.localisation}</p>
+        </div>
+      </div>
 
-        <h2>Education</h2>
-        {education.map((item, index) => (
-            <div key={item.id}>
-                <h3>Course {index + 1}</h3>
-                <p>Course: {item.course}</p>
-                <p>University: {item.university}</p>
-                <p>Graduation Date: {item.graduationDate}</p>
+        <h2 className='fs-md'>Education</h2>
+        {education.map((item) => (
+            <div key={item.id} className='cvPreviewForm'>
+                <p>{item.course}</p>
+                <p>{item.university}</p>
+                <p>{item.graduationDate}</p>
             </div>
-        ))};
+        ))}
 
-        <h2>Experience</h2>
-        {experience.map((item, index) => (
-            <div key={item.id}>
-                <h3>Job {index + 1}</h3>
-                <p>Company: {item.company}</p>
-                <p>Position: {item.position}</p>
-                <p>From: {item.from}</p>
-                <p>To: {item.to}</p>
+        <h2 className='fs-md'>Experience</h2>
+        {experience.map((item) => (
+            <div key={item.id} className='cvPreviewForm'>
+                <p>{item.company}</p>
+                <p>{item.position}</p>
+                <p>From {item.from} to {item.to}</p>
             </div>
-        ))};   
+        ))}   
     </div>
   );
 }

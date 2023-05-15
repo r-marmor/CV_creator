@@ -6,7 +6,7 @@ import CvPreview from './components/CvPreview';
 
 
 function App() {
-  const [personalDetails, setPersonalDetails] = useState({ name: '', email: '', phone: '' });
+  const [personalDetails, setPersonalDetails] = useState({ name: '', title: '', email: '', phone: '', localisation: '' });
   const [education, setEducation] = useState([{ id: uuidv4(), course: '', university: '', graduationDate: '' }]);
   const [experience, setExperience] = useState([{ id: uuidv4(), company: '', position: '', from: '', to: '' }]);
 
